@@ -1,0 +1,106 @@
+/* * {
+    color: green;
+} */
+
+/* 속성 선택자 */
+/* div[name] {
+    background-color: orange;
+} */
+
+/*  */
+div[name=name1] {
+    background-color: orange;
+
+}
+
+div[name=name1] {
+    background-color: yellow;
+}
+
+div[class=class] {
+    background-color: yellow;
+}
+
+div[class|=class] {
+    background-color: aqua;
+}
+
+/* div 중 name 속성값이 name으로 시작되는 태그(요소) 선택 */
+div[name^=name]{
+    background-color: blue;
+}
+
+/* div 중 class 속성값이 class로 끝나는 태그(요소) 선택 */
+div[class$=class] {
+    color: white;
+}
+
+/* div 중 name 속성값이 "2"로 끝나는 태그(요소) 선택 */
+div[name$="2"] {
+    color: coral;
+}
+
+/* div 중 class 속성값에 i를 포함하는 태그(요소) 선택 */
+div[class*=i] {
+    background-color: greenyellow;
+    color: red;
+}
+
+/* 자식 선택자 / 후손 선택자 */
+#test1>h4 {
+    background-color: orange;
+}
+
+#test1>ul>h4 {
+    background-color: purple;
+}
+
+#test1>ul>li {
+    background-color: green;
+}
+
+#test1 h4 {
+    color: white;
+}
+
+#test1 li {
+    color: red;
+}
+
+/* 형제 선택자 */
+#test2+div {
+    background-color: yellowgreen;
+
+}
+
+#test2~div {
+    color: white;
+}
+
+#test2+div~div {
+    background-color: orangered;
+}
+
+/* 반응 선택자 */
+#active-test, #hover-test {
+    background-color: yellowgreen;
+    width: 300px;
+    height: 300px;
+}
+
+#active-test:active {
+    background-color: yellow;
+    color: red;
+}
+
+#hover-test:hover {
+    background-color: hotpink;
+    color: white;
+    cursor: pointer;
+}
+
+/* #userId:focus, #userPwd:focus { */
+input[name^=user]:focus{
+    outline: none;
+    border: 4px solid hotpink;
+}
